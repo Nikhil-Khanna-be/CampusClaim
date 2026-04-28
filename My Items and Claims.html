@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Claims - Campus Claim</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fff8f7",
+                    "outline-variant": "#e1bebe",
+                    "inverse-primary": "#ffb3b3",
+                    "on-secondary-fixed": "#091d2e",
+                    "secondary": "#4e6073",
+                    "surface-container": "#ffe9e8",
+                    "secondary-fixed": "#d1e4fb",
+                    "background": "#fff8f7",
+                    "tertiary-fixed": "#a7eef6",
+                    "on-primary-fixed-variant": "#920322",
+                    "inverse-surface": "#3c2c2c",
+                    "outline": "#8d7070",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#8bd2da",
+                    "surface-variant": "#f7dcdc",
+                    "on-secondary-container": "#526478",
+                    "on-primary-container": "#ffb7b7",
+                    "on-background": "#261818",
+                    "primary-container": "#a6192e",
+                    "surface": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#005e65",
+                    "primary-fixed-dim": "#ffb3b3",
+                    "on-tertiary-fixed-variant": "#004f55",
+                    "tertiary": "#00454a",
+                    "surface-container-high": "#fde2e1",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "on-tertiary-container": "#8ed5dd",
+                    "surface-container-low": "#fff0ef",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#eed4d3",
+                    "primary": "#81001c",
+                    "secondary-container": "#cfe2f9",
+                    "on-tertiary-fixed": "#002022",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#b42537",
+                    "primary-fixed": "#ffdad9",
+                    "inverse-on-surface": "#ffedec",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#594040",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#261818",
+                    "on-primary-fixed": "#400009",
+                    "surface-container-highest": "#f7dcdc",
+                    "secondary-fixed-dim": "#b5c8df",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-page": "32px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "container-max-width": "1200px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "h2": ["Public Sans"],
+                    "h1": ["Public Sans"],
+                    "body-sm": ["Public Sans"],
+                    "h3": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "button": ["Public Sans"],
+                    "label-caps": ["Public Sans"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center w-full px-8 h-16 sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold text-red-800 dark:text-red-500 tracking-tight">Campus Claim</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-public-sans text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-red-800 dark:hover:text-red-400 transition-colors" href="#">Dashboard</a>
+<a class="font-public-sans text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-red-800 dark:hover:text-red-400 transition-colors" href="#">Browse Items</a>
+<a class="font-public-sans text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-red-800 dark:hover:text-red-400 transition-colors" href="#">Report Lost</a>
+<a class="font-public-sans text-sm font-medium text-red-800 dark:text-red-500 border-b-2 border-red-800 dark:border-red-500 pb-1" href="#">My Claims</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline">
+<img alt="Student Profile Picture" class="w-full h-full object-cover" data-alt="professional portrait of a university student with a friendly expression in a campus setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKgy3G5_1B1dhRimq5O2WHF201_rz-CyS3uFIL-AZuCZf7UR8bOB32B14su0rmq1wmhJNndzVf05k3aPK7EoXNilu4q2RD7cQldzJXUJBA-wukHpmQDd1uiDWPEmfIZaNrWsxnf7zH435-TzxYIZA1cEueUYbWesWU4Z5z5JKbM13Gu7qa-ZhDd_KjJC4eQhhRq3ScP-X0Jg2ePeFJFQoUH18iUTUnXZTHgDhtjREkYRH4mHOxowVXkm0AhlG0cL7ghYM9NGpufO4"/>
+</div>
+</div>
+</nav>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col w-64 h-screen fixed left-0 top-0 pt-20 pb-8 px-4 bg-gray-50 dark:bg-gray-950 border-r border-gray-200 dark:border-gray-800">
+<div class="mb-8 px-4 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div>
+<h2 class="text-sm font-black text-red-800 dark:text-red-500 leading-tight">Student Portal</h2>
+<p class="text-[10px] uppercase tracking-wider text-outline">Institutional Access</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200 font-public-sans text-sm font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Overview
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200 font-public-sans text-sm font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+                    Found Catalog
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200 font-public-sans text-sm font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    New Report
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-400 rounded-lg transition-all duration-200 font-public-sans text-sm font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+                    Tracking
+                </a>
+</nav>
+<div class="mt-auto space-y-4">
+<button class="w-full py-3 px-4 bg-white border border-outline rounded-lg text-primary font-button flex items-center justify-center gap-2 hover:bg-gray-50 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+                    Help Center
+                </button>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200 font-public-sans text-sm font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Logout
+                </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-64 p-8">
+<div class="max-w-[1200px] mx-auto">
+<!-- User Context Header -->
+<header class="mb-10 bg-white border border-outline-variant p-6 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-full border-4 border-surface-container overflow-hidden">
+<img alt="Student Profile Picture" class="w-full h-full object-cover" data-alt="close-up portrait of a university student with a friendly expression in a campus setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBNBEq0cTVbLlNRbY_PgJkqfMWedCm_zCpWYvtMdgLNqBk4_EiwCkiOUFEn4CiwisePoRZDw0mkEZFo7MZknKi0BqSc-vE-GCFSSnK4gAbxFy8MLKzLEzp0rkGjLyAFjewba-FpHj6jCD1zfKodoxOc8IJ77ge3DpWRoqkVaNwLUWW8ELf-zPOABz_0riFMjAWCcSYXGcDJ3ettgytcbLFTKxVRs93j2gNLxbDEWAun4GKQC88ecao2S8tS6s4mvmDJUDPXue1ARc"/>
+</div>
+<div>
+<h1 class="font-h1 text-h1 text-on-surface">Alex Johnston</h1>
+<p class="font-body-sm text-body-sm text-outline">Student ID: 2024-55829 • Computer Science Dept.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-outline mb-1 uppercase">Active Claims</p>
+<p class="font-h2 text-h2 text-primary">03</p>
+</div>
+<div class="w-px h-12 bg-outline-variant mx-2"></div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-outline mb-1 uppercase">Lost Reports</p>
+<p class="font-h2 text-h2 text-on-surface">01</p>
+</div>
+</div>
+</header>
+<!-- Claims & Reports Section -->
+<section class="space-y-6">
+<!-- Tab Navigation -->
+<div class="flex border-b border-outline-variant gap-8">
+<button class="pb-4 px-2 border-b-4 border-primary text-primary font-button text-body-lg">
+                            My Claims
+                        </button>
+<button class="pb-4 px-2 border-b-4 border-transparent text-outline hover:text-on-surface transition-colors font-button text-body-lg">
+                            My Lost Reports
+                        </button>
+</div>
+<!-- Filter Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-lg border border-outline-variant">
+<div class="flex gap-4 items-center">
+<span class="font-label-caps text-label-caps text-outline uppercase">Filter By:</span>
+<select class="bg-white border border-outline-variant rounded-md text-body-sm px-3 py-1.5 focus:ring-2 focus:ring-primary-container outline-none transition-all">
+<option>All Status</option>
+<option>Approved</option>
+<option>Pending</option>
+<option>Rejected</option>
+</select>
+<select class="bg-white border border-outline-variant rounded-md text-body-sm px-3 py-1.5 focus:ring-2 focus:ring-primary-container outline-none transition-all">
+<option>Last 30 Days</option>
+<option>Last 6 Months</option>
+<option>2023 Academic Year</option>
+</select>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-white border border-outline-variant rounded-md text-body-sm w-64 focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="Search claims..." type="text"/>
+</div>
+</div>
+<!-- Items Table Card -->
+<div class="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 border-b border-outline-variant">
+<th class="px-6 py-4 font-label-caps text-label-caps text-outline uppercase">Item Details</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-outline uppercase">Date Filed</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-outline uppercase">Claim ID</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-outline uppercase">Status</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-outline uppercase text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Table Row 1 -->
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden border border-outline-variant">
+<img alt="Claimed Item" class="w-full h-full object-cover" data-alt="a pair of modern over-ear noise cancelling headphones resting on a wooden table with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiwW01ThpINF9VXWyIFXirSQK849QADqKl99EkeiGjIh8mIWleE-BwAPKiaPL7BGpBknIrUp2YzvfER6I0Xwjf3y4bZJh3F2oU5-4teMKmI2Ody6H8reJYSDs1LVyTHk42-bGkOQh9OVDAWiMedVRMVpd_ilpPxBDBD_kSJlS3ygw-mVzVovFaT3G20oKLO1COM7GpipHDB3KW-uF5jLsJiYURGz9GTYy317omH-txLLtGEf3wh53OrPqhc3bjmQpCDmGqCrDXolI"/>
+</div>
+<div>
+<p class="font-h3 text-body-lg text-on-surface">Sony WH-1000XM4 Headphones</p>
+<p class="text-body-sm text-outline">Location: Main Library, Level 3</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-body-sm text-on-surface">Oct 24, 2023</p>
+<p class="text-[10px] text-outline uppercase">11:42 AM</p>
+</td>
+<td class="px-6 py-5">
+<span class="font-mono text-body-sm text-secondary">#CL-882910</span>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                            Approved
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-button text-sm hover:underline">View Details</button>
+</td>
+</tr>
+<!-- Table Row 2 -->
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden border border-outline-variant">
+<img alt="Claimed Item" class="w-full h-full object-cover" data-alt="close-up of a high-end mechanical keyboard with blue and gray keycaps and soft backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADAEVMrsPJAwOdW17DdyUDxFfPmnJ3XTqlXDFZbPNvhBlTdcMDf5Opb2aa_pwjBMsjzkbZzFBiDV0RGlebSbeupSlEmyl87kfWMx_V9P1ra3cEA_LFlCI-hBs6FSKIKyoutlYrcmcBBzr7gYxPCgFYyy8vogkbbRTPYAF-XO2xQmZIuhXNaHjOhy35p-nDgKAhnjYsUCS00lNxamEaQv0Jf1ELWoM_nic8yyNQFr31pcK6f0KUEy6ySsoOFGNghTVQWCNsmWH4zQc"/>
+</div>
+<div>
+<p class="font-h3 text-body-lg text-on-surface">Blue Mechanical Keyboard</p>
+<p class="text-body-sm text-outline">Location: Engineering Lab B</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-body-sm text-on-surface">Oct 22, 2023</p>
+<p class="text-[10px] text-outline uppercase">02:15 PM</p>
+</td>
+<td class="px-6 py-5">
+<span class="font-mono text-body-sm text-secondary">#CL-882754</span>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                                            Pending
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-button text-sm hover:underline">Track Claim</button>
+</td>
+</tr>
+<!-- Table Row 3 -->
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden border border-outline-variant">
+<img alt="Claimed Item" class="w-full h-full object-cover" data-alt="a sleek black metal water bottle on a white surface with water droplets on its side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNs9BzP5Eldh2mfqIWu37EoYCZG0ulJ2CJEG42Covr6pD4Z--qxgnYSJXB8-Ic5eSExA0PflNfzSWDYznvfkD7X3J2v-KAY0nmdDHCPeFkMQGhQFaQKNKmP0dfAnQVG5Z-8tcMyp2Myb1FahAV6ALEvUEj7DM1If1NTkMKmhopYFwaDfAyie9_ZXxA44YzjM-UrJBlHHJuN-XepF2xYNJwxAwwwMyQmWPU-5l53DvuFHchX2jaltuEu63tOG8Rx-aHA8MadxrI7mA"/>
+</div>
+<div>
+<p class="font-h3 text-body-lg text-on-surface">Black Hydro Flask 32oz</p>
+<p class="text-body-sm text-outline">Location: Student Union Cafe</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-body-sm text-on-surface">Oct 18, 2023</p>
+<p class="text-[10px] text-outline uppercase">09:30 AM</p>
+</td>
+<td class="px-6 py-5">
+<span class="font-mono text-body-sm text-secondary">#CL-881209</span>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                                            Rejected
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-button text-sm hover:underline">See Reason</button>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="px-6 py-4 bg-gray-50 border-t border-outline-variant flex items-center justify-between">
+<p class="text-body-sm text-outline">Showing 1 to 3 of 12 active claims</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-outline-variant rounded bg-white text-body-sm disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 border border-outline-variant rounded bg-white text-body-sm">Next</button>
+</div>
+</div>
+</div>
+<!-- Information Alert -->
+<div class="flex gap-4 p-6 bg-secondary-container rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="info">info</span>
+<div>
+<h4 class="font-h3 text-body-lg text-on-secondary-container">Claim Pickup Information</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container/80 mt-1">
+                                Approved claims can be picked up at the **Office of Student Affairs (Room 204)** between 9:00 AM and 4:00 PM. Please bring your valid Student ID for verification. Items are held for 14 days after approval.
+                            </p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Contextual FAB (Hidden on this Tracking Page per instruction, but structure defined for potential desktop use) -->
+<!-- Suppressed on Details/Transactional screens as per rule -->
+</body></html>

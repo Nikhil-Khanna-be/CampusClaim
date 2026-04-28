@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "primary-fixed": "#ffdad9",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#ffe9e8",
+                        "primary-container": "#a6192e",
+                        "tertiary": "#00454a",
+                        "on-secondary-fixed": "#091d2e",
+                        "on-surface-variant": "#594040",
+                        "surface-dim": "#eed4d3",
+                        "inverse-surface": "#3c2c2c",
+                        "outline": "#8d7070",
+                        "on-primary-fixed-variant": "#920322",
+                        "on-secondary-container": "#526478",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#81001c",
+                        "surface-bright": "#fff8f7",
+                        "surface-container-high": "#fde2e1",
+                        "surface": "#fff8f7",
+                        "on-primary-fixed": "#400009",
+                        "inverse-primary": "#ffb3b3",
+                        "surface-tint": "#b42537",
+                        "secondary": "#4e6073",
+                        "surface-container-low": "#fff0ef",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#8ed5dd",
+                        "primary-fixed-dim": "#ffb3b3",
+                        "on-background": "#261818",
+                        "tertiary-container": "#005e65",
+                        "background": "#fff8f7",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#a7eef6",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#f7dcdc",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "outline-variant": "#e1bebe",
+                        "inverse-on-surface": "#ffedec",
+                        "secondary-fixed": "#d1e4fb",
+                        "tertiary-fixed-dim": "#8bd2da",
+                        "on-tertiary-fixed": "#002022",
+                        "secondary-container": "#cfe2f9",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#261818",
+                        "on-primary-container": "#ffb7b7",
+                        "surface-container-highest": "#f7dcdc",
+                        "secondary-fixed-dim": "#b5c8df"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "margin-page": "32px",
+                        "container-max-width": "1200px",
+                        "stack-sm": "8px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Public Sans"],
+                        "button": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "label-caps": ["Public Sans"],
+                        "h3": ["Public Sans"],
+                        "h2": ["Public Sans"],
+                        "body-sm": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen">
+<!-- Navigation Drawer (SideNav) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col z-40 bg-white dark:bg-gray-900 h-full w-72 border-r border-gray-200 dark:border-gray-800 shadow-md dark:shadow-none font-['Public_Sans'] text-sm font-medium">
+<div class="text-red-800 dark:text-red-500 font-bold px-4 py-6 text-xl">
+            Campus Claim
+        </div>
+<div class="flex items-center px-4 py-4 mb-4 gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a middle-aged university administrator in a clean office setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsCwxch3IsNCUTuVUv8loVoX9pVAc_9feZ-5dA3klYe5WH_YCx32vRn00AaR07xqJOJOlLvFT1L3XGIcUkrUXtjpOaWwt9rK3teP58Fvk72NFmLSKrMtm791MYDvrs_RqsaGvx4Gt8_WZVgkpgbNy9V7taTn_7dKqA8fVjmY6rE2yjecMl1sIxksgjc_cYaNhUKFYKdcdvIZLHklTZ7wusvKqzT4J9yuE3VxB3FlYvnJooi7_m3RHvRxjLyfmOsoyWb56WUygX9CE"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Admin User</p>
+<p class="text-xs text-gray-500">University Oversight</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-gray-600 dark:text-gray-400 px-4 py-3 mx-2 my-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center gap-3 transition-transform duration-150 translate-x-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Overview
+            </a>
+<a class="bg-red-50 dark:bg-red-950/30 text-red-800 dark:text-red-400 font-bold rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory</span>
+                Manage Found
+            </a>
+<a class="text-gray-600 dark:text-gray-400 px-4 py-3 mx-2 my-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center gap-3 transition-transform duration-150 translate-x-1" href="#">
+<span class="material-symbols-outlined">task_alt</span>
+                Manage Claims
+            </a>
+<a class="text-gray-600 dark:text-gray-400 px-4 py-3 mx-2 my-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center gap-3 transition-transform duration-150 translate-x-1" href="#">
+<span class="material-symbols-outlined">find_in_page</span>
+                Manage Lost
+            </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pl-72 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-800 dark:text-red-500">school</span>
+<h1 class="font-['Public_Sans'] font-semibold tracking-tight text-red-800 dark:text-red-500 uppercase text-xl tracking-wider">Campus Claim</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors rounded-full active:opacity-80 transition-all duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-6 w-px bg-gray-200"></div>
+<button class="font-button text-primary hover:underline">Logout</button>
+</div>
+</header>
+<div class="max-w-[1200px] mx-auto p-margin-page">
+<!-- Page Title & Stats Area -->
+<div class="mb-stack-lg flex justify-between items-end">
+<div>
+<h2 class="font-h1 text-h1 text-on-background mb-2">Manage Found Items</h2>
+<p class="text-secondary font-body-lg">Review and organize items recovered across the campus premises.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-white border border-outline-variant p-4 rounded-xl shadow-sm text-center min-w-[120px]">
+<p class="text-label-caps text-secondary uppercase mb-1">In Storage</p>
+<p class="text-h2 font-h2 text-primary">42</p>
+</div>
+<div class="bg-white border border-outline-variant p-4 rounded-xl shadow-sm text-center min-w-[120px]">
+<p class="text-label-caps text-secondary uppercase mb-1">Claimed</p>
+<p class="text-h2 font-h2 text-tertiary">18</p>
+</div>
+</div>
+</div>
+<!-- Search and Filter Bar -->
+<div class="bg-white border border-outline-variant rounded-xl p-4 shadow-sm mb-stack-lg flex flex-wrap gap-4 items-center">
+<div class="flex-1 min-w-[300px] relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white border border-outline rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Search by item name, ID, or location..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-semibold text-secondary">Status:</span>
+<select class="bg-white border border-outline rounded-lg px-3 py-2 text-body-sm focus:ring-2 focus:ring-primary outline-none">
+<option>All Statuses</option>
+<option>Stored</option>
+<option>Claimed</option>
+<option>Returned</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-semibold text-secondary">Sort by:</span>
+<select class="bg-white border border-outline rounded-lg px-3 py-2 text-body-sm focus:ring-2 focus:ring-primary outline-none">
+<option>Date Found (Newest)</option>
+<option>Date Found (Oldest)</option>
+<option>Alphabetical</option>
+</select>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-button hover:bg-red-900 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                    Apply Filters
+                </button>
+</div>
+<!-- Item Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item Card 1 -->
+<div class="bg-white border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full relative overflow-hidden bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="high quality black cotton hoodie folded neatly on a wooden campus bench with natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIQ_RzqZhw9jedyH8C59WRQ9fZtFan7M1-sh2iRM4OlMIxrFBgxoow4Ef4HSGHWoTOSlu59cAZ7YyUycD4GCEGiK6cvYfAqtskMhDTw132swvfGry7S6GQUpFy2_yIUAmI-OP20M5g-o7TItIflK-zjSYs8GZ2ndcX8l_e3vB4Ew8QcoaOmCghOxW-_gGAFbavj7ES7g_79wIpPZ-WbpjWcezxNrVx6fM4RwV2E3kNWBZLeCf6AVZfCjR_NkdqFxOcsyDyqxUnDm8"/>
+<div class="absolute top-3 right-3">
+<span class="bg-blue-100 text-blue-800 text-label-caps px-3 py-1 rounded-full uppercase">Stored</span>
+</div>
+</div>
+<div class="p-stack-md flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Black North Face Hoodie</h3>
+<span class="text-label-caps text-outline">ID: #8821</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-secondary mb-4">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>Found: Oct 24, 2023</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mb-4">Found in the Student Union cafeteria. Size Medium, slightly worn, zipper works perfectly.</p>
+</div>
+<div class="p-stack-md border-t border-outline-variant grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-50 text-secondary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+<span class="text-[10px] font-bold mt-1">EDIT</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-50 text-secondary transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold mt-1">CLAIMS</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-red-50 text-primary transition-colors">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-[10px] font-bold mt-1">RETURN</span>
+</button>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="bg-white border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full relative overflow-hidden bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="modern silver aluminum apple watch with a black sports band lying on a white library desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHJQTKlZ6nY65Td6y8sUhH-cP7FBAWThqsipe7HXO7AjakfLkdEEeOf1S42zDju_QjL6OMwODozdOizMGhJ4J_pAoeuiLloJ6M4l5hfgLUbyclC7RbEL8gK8eF4sowXWWhYUGJpqBxlZAECgWxangAIBt_GjEsTLLSh5c6-chhkUB3CtcR4ctm0zyWt4i8TsA7y4Uz6HweIztx-Q45hP84Rw9VjjyoXPpmVrtOYNTZ8uVZ6mJWee6aOvru86jf6QJo1_q1iM9-Oh0"/>
+<div class="absolute top-3 right-3">
+<span class="bg-amber-100 text-amber-800 text-label-caps px-3 py-1 rounded-full uppercase">Claimed</span>
+</div>
+</div>
+<div class="p-stack-md flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Apple Watch Series 7</h3>
+<span class="text-label-caps text-outline">ID: #8795</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-secondary mb-4">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>Found: Oct 22, 2023</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mb-4">Recovered from the Library floor, 3rd floor. Currently has 3 pending claims from students.</p>
+</div>
+<div class="p-stack-md border-t border-outline-variant grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-50 text-secondary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+<span class="text-[10px] font-bold mt-1">EDIT</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-secondary-container text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold mt-1">3 CLAIMS</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-red-50 text-primary transition-colors">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-[10px] font-bold mt-1">RETURN</span>
+</button>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="bg-white border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full relative overflow-hidden bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="brown leather bi-fold wallet sitting on a grey concrete walkway with blurred trees in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9h2NOe9b0hNm0p8EPxOTBg5yJOJfJb7u3GT6mxHh3hBrT2B78GK4VsCogP4HnzDW2DEtWhptRPnEg77-oE4y2mbW61cCPNfSy4SzYoE-e61P_HAGROy2BFocZIhgEHHs3TSSiz-8fVrfTajAbgaKXm-XREKbrPZ_JiR8Q0DrzIW8jJKR1HWiCsBX3dk0qf9IPuGX6tuEJJMRwHT2HuySHbR8xACZ4eefI8MU9oooNP1x1Iz4JFZX-6CUsr5F35Cjq0iMonawAcvM"/>
+<div class="absolute top-3 right-3">
+<span class="bg-green-100 text-green-800 text-label-caps px-3 py-1 rounded-full uppercase">Returned</span>
+</div>
+</div>
+<div class="p-stack-md flex-1 opacity-75">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background line-through">Leather Wallet</h3>
+<span class="text-label-caps text-outline">ID: #8750</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-secondary mb-4">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>Returned: Oct 20, 2023</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mb-4">Returned to Mark Stevenson (ID: 5543). Successfully verified with ID and contents description.</p>
+</div>
+<div class="p-stack-md border-t border-outline-variant flex justify-between items-center bg-gray-50">
+<span class="text-body-sm font-bold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span>
+                            Archived
+                        </span>
+<button class="text-button text-primary hover:underline">View History</button>
+</div>
+</div>
+<!-- Item Card 4 -->
+<div class="bg-white border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full relative overflow-hidden bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional silver DSLR camera with a large lens sitting on a lecture hall desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWw3bOSR-3k97RsqwotoyA_dELFnsr6OkC1IfXrbWLjR2iadK4XUnL7Bv82UNnrA-VJkZ14wnihf_rzTqoqa9Zb8Rkn9aC6uRgShZ76YB7NK9-OatCDLw5aRSgwoiELiriUUFIPkDaJBJq4SYdiNdVY2cMg8xMvaBTPyk1ZOTqpAEJPY6v2-Kt59iNPK0yorETc7VxOrA_PBFSG6BAcrLDwACDsMO9vB4-esMmh8sZikENGGo2ii61OV1bcO15pqqS79FrdaXBBQQ"/>
+<div class="absolute top-3 right-3">
+<span class="bg-blue-100 text-blue-800 text-label-caps px-3 py-1 rounded-full uppercase">Stored</span>
+</div>
+</div>
+<div class="p-stack-md flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Canon DSLR Camera</h3>
+<span class="text-label-caps text-outline">ID: #8834</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-secondary mb-4">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>Found: Oct 25, 2023</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mb-4">Found in the Engineering Lab. High-value item. Keep in secure storage room B.</p>
+</div>
+<div class="p-stack-md border-t border-outline-variant grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-50 text-secondary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+<span class="text-[10px] font-bold mt-1">EDIT</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-50 text-secondary transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold mt-1">CLAIMS</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-red-50 text-primary transition-colors">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-[10px] font-bold mt-1">RETURN</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-stack-lg flex justify-between items-center border-t border-outline-variant pt-stack-md">
+<p class="text-body-sm text-secondary">Showing 4 of 42 found items</p>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-outline rounded-lg text-body-sm font-semibold hover:bg-gray-50 disabled:opacity-50">Previous</button>
+<button class="px-4 py-2 border border-outline bg-primary text-white rounded-lg text-body-sm font-semibold">1</button>
+<button class="px-4 py-2 border border-outline rounded-lg text-body-sm font-semibold hover:bg-gray-50">2</button>
+<button class="px-4 py-2 border border-outline rounded-lg text-body-sm font-semibold hover:bg-gray-50">3</button>
+<button class="px-4 py-2 border border-outline rounded-lg text-body-sm font-semibold hover:bg-gray-50">Next</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button for Adding Found Items -->
+<button class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-red-900 transition-all scale-100 hover:scale-110 active:scale-95 z-50">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

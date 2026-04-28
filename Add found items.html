@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004f55",
+                    "primary-fixed": "#ffdad9",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ffe9e8",
+                    "primary-container": "#a6192e",
+                    "tertiary": "#00454a",
+                    "on-secondary-fixed": "#091d2e",
+                    "on-surface-variant": "#594040",
+                    "surface-dim": "#eed4d3",
+                    "inverse-surface": "#3c2c2c",
+                    "outline": "#8d7070",
+                    "on-primary-fixed-variant": "#920322",
+                    "on-secondary-container": "#526478",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#81001c",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-high": "#fde2e1",
+                    "surface": "#fff8f7",
+                    "on-primary-fixed": "#400009",
+                    "inverse-primary": "#ffb3b3",
+                    "surface-tint": "#b42537",
+                    "secondary": "#4e6073",
+                    "surface-container-low": "#fff0ef",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#8ed5dd",
+                    "primary-fixed-dim": "#ffb3b3",
+                    "on-background": "#261818",
+                    "tertiary-container": "#005e65",
+                    "background": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#a7eef6",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#f7dcdc",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "outline-variant": "#e1bebe",
+                    "inverse-on-surface": "#ffedec",
+                    "secondary-fixed": "#d1e4fb",
+                    "tertiary-fixed-dim": "#8bd2da",
+                    "on-tertiary-fixed": "#002022",
+                    "secondary-container": "#cfe2f9",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#261818",
+                    "on-primary-container": "#ffb7b7",
+                    "surface-container-highest": "#f7dcdc",
+                    "secondary-fixed-dim": "#b5c8df"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "margin-page": "32px",
+                    "container-max-width": "1200px",
+                    "stack-sm": "8px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "h1": ["Public Sans"],
+                    "button": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "label-caps": ["Public Sans"],
+                    "h3": ["Public Sans"],
+                    "h2": ["Public Sans"],
+                    "body-sm": ["Public Sans"]
+            },
+            "fontSize": {
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-20">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-gray-100 rounded-full transition-colors active:opacity-80">
+<span class="material-symbols-outlined text-red-800">arrow_back</span>
+</button>
+<h1 class="font-['Public_Sans'] font-semibold tracking-tight text-xl text-red-800 uppercase tracking-wider">Campus Claim</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">AD</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 sm:px-8 py-8">
+<!-- Header Section -->
+<div class="mb-8">
+<h2 class="font-h2 text-h2 text-primary mb-2">Add Found Item</h2>
+<p class="font-body-lg text-body-lg text-secondary">Register a new item recovered on campus to begin the claim process.</p>
+</div>
+<!-- Form Container -->
+<div class="bg-white border border-outline-variant rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="p-6 sm:p-8">
+<form class="space-y-8">
+<!-- Section 1: Basic Information -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="col-span-full border-b border-surface-variant pb-2">
+<h3 class="font-h3 text-h3 text-on-surface">General Details</h3>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary block">ITEM NAME</label>
+<input class="w-full px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm" placeholder="e.g. Silver MacBook Air" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary block">CATEGORY</label>
+<select class="w-full px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-white">
+<option>Select a category</option>
+<option>Electronics</option>
+<option>Books &amp; Stationary</option>
+<option>Clothing &amp; Accessories</option>
+<option>Keys &amp; ID Cards</option>
+<option>Other</option>
+</select>
+</div>
+<div class="col-span-full space-y-2">
+<label class="font-label-caps text-label-caps text-secondary block">DETAILED DESCRIPTION</label>
+<textarea class="w-full px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm" placeholder="Mention distinctive marks, color, brand, or any unique features..." rows="4"></textarea>
+</div>
+</section>
+<!-- Section 2: Discovery Details -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="col-span-full border-b border-surface-variant pb-2">
+<h3 class="font-h3 text-h3 text-on-surface">Discovery Details</h3>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary block">LOCATION FOUND</label>
+<select class="w-full px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-white">
+<option>Select Building/Area</option>
+<option>Main Library (Level 1)</option>
+<option>Student Union Hub</option>
+<option>Science Wing B</option>
+<option>Campus Cafeteria</option>
+<option>Outdoor Plaza</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary block">DATE &amp; TIME FOUND</label>
+<input class="w-full px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm" type="datetime-local"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary block">SUBMITTED TO</label>
+<select class="w-full px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-white">
+<option>Select Intake Point</option>
+<option>Admin Office A (Central)</option>
+<option>Security Gate 1 (North)</option>
+<option>Security Gate 2 (South)</option>
+<option>Department Helpdesk</option>
+</select>
+</div>
+</section>
+<!-- Section 3: Visual Proof -->
+<section class="space-y-stack-md">
+<div class="border-b border-surface-variant pb-2">
+<h3 class="font-h3 text-h3 text-on-surface">Image Upload</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="md:col-span-1 aspect-square rounded-xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-primary transition-colors">add_a_photo</span>
+<span class="font-label-caps text-label-caps text-secondary mt-2">UPLOAD PHOTO</span>
+</div>
+<!-- Placeholder previews for UI visualization -->
+<div class="hidden md:flex flex-col items-center justify-center border border-outline-variant rounded-xl bg-gray-50 opacity-50 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="clean overhead shot of a silver laptop on a neutral university library desk with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeMe5J2H3FrWcC8D7e_BUVIDiBaOKfoMx8OJDqbRztINzDZWMLEvihU-DvcAPJ2UT6M8TTwinI1oDyVUFccSVOA-0a1JyfM-ggiLgW3giobiSofi4FVTOvzhb3ej6M1P__sQZ4LHt1V1nZBi7gzvf_jMrs8FlTpfcXNEOYcow5ajbxSacxiZmA6oi_JQ39HnprBhGkHzSzumNQ2IpkphiTa7W9cDMZpvXytGD7qSRTWQC4njCnie59hv13zqoC08ndFXFj-kbC7F0"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">delete</span>
+</div>
+</div>
+<div class="hidden md:flex flex-col items-center justify-center border border-outline-variant rounded-xl bg-gray-50 opacity-50 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close up of a modern digital watch on a grey surface showing minor scratches on the display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ISyu2nTqZ_BSw_t8bOy17L568HzcBDWX76m4gUHXFJXW4dg1-ki1Lihdao8MMvhomP_DThW0caxfgYu1qxHFHbatIB62wszPgUYAKzvnr-CJG0yAzPGnR89LhHRtQZoUVnLA1C-CR5fHOVYwolt02ya3mbSOH12n7ybjnYo_fp_-FP8p_vmiOYkjbxq4M_JBfJnnvBHgKsGWPhw8jHn0arcZ1kaYuGcYS5m8SfOHqglAAN0JgqYSQOTEuLrrZhPh_IR58ekD9lo"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">delete</span>
+</div>
+</div>
+<div class="hidden md:flex flex-col items-center justify-center border border-outline-variant rounded-xl bg-gray-50 opacity-50 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="a pair of classic black optical glasses resting on a wooden campus bench in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiXeaighOdFhMYc47AeBbgK7J2omSSUcHXtHzyVyrFserEyedGmsaGQZlrXkLq7wva56xBPf-9qFAvJahiRe-VrL19p-TvYPYLfQN4ECWV03vjqZr5d4k8zXL7aoEAibfYaXG3IjclQx67TsBCOW9twlFm0FdBi-q-3wQhU65WhRdY90hJhm60JMGItKu6y4c2wnEtMnAx1HQzIV6_xDzW8Ab_M8LBrkD_62bjQzMKtg3xI7cjs771pNCipjtPHR5JBG57BS0B5L0"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">delete</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-4 pt-6 border-t border-surface-variant">
+<button class="w-full sm:w-auto px-8 py-3 font-button text-button text-primary border border-primary rounded-lg hover:bg-primary-fixed transition-colors active:scale-95" type="button">
+                            Cancel
+                        </button>
+<button class="w-full sm:w-auto px-10 py-3 font-button text-button bg-primary text-white rounded-lg shadow-md hover:bg-primary-container transition-all active:scale-95 flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">publish</span>
+                            Post Found Item
+                        </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Guidance Banner -->
+<div class="mt-8 p-4 bg-secondary-container rounded-lg flex items-start gap-4">
+<span class="material-symbols-outlined text-on-secondary-container">info</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-secondary-container mb-1">ADMIN PROTOCOL</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container opacity-90">All items submitted through this portal will be immediately visible to students. Please ensure descriptions are accurate but do not include sensitive personal identification info found inside the item.</p>
+</div>
+</div>
+</main>
+<!-- Navigation Drawer (Admin Mode) - Hidden on mobile, shown as rail on desktop if desired -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-20 flex-col z-40 bg-white border-r border-gray-200 pt-20">
+<nav class="flex flex-col items-center gap-4 py-4">
+<div class="p-3 text-gray-500 hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">dashboard</span>
+</div>
+<div class="p-3 text-gray-500 hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">inventory</span>
+</div>
+<div class="p-3 text-red-800 bg-red-50 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<div class="p-3 text-gray-500 hover:bg-gray-100 rounded-lg cursor-pointer transition-colors">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+</nav>
+</aside>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<div class="flex flex-col items-center justify-center text-gray-500 font-['Public_Sans'] text-xs font-medium px-3 py-1">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 font-['Public_Sans'] text-xs font-medium px-3 py-1">
+<span class="material-symbols-outlined">search</span>
+<span>Browse</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 font-['Public_Sans'] text-xs font-medium px-3 py-1">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>My Items</span>
+</div>
+<div class="flex flex-col items-center justify-center text-red-800 bg-red-50 rounded-xl font-['Public_Sans'] text-xs font-medium px-3 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span>Report</span>
+</div>
+</nav>
+</body></html>

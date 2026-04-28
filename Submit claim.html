@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004f55",
+                    "primary-fixed": "#ffdad9",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ffe9e8",
+                    "primary-container": "#a6192e",
+                    "tertiary": "#00454a",
+                    "on-secondary-fixed": "#091d2e",
+                    "on-surface-variant": "#594040",
+                    "surface-dim": "#eed4d3",
+                    "inverse-surface": "#3c2c2c",
+                    "outline": "#8d7070",
+                    "on-primary-fixed-variant": "#920322",
+                    "on-secondary-container": "#526478",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#81001c",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-high": "#fde2e1",
+                    "surface": "#fff8f7",
+                    "on-primary-fixed": "#400009",
+                    "inverse-primary": "#ffb3b3",
+                    "surface-tint": "#b42537",
+                    "secondary": "#4e6073",
+                    "surface-container-low": "#fff0ef",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#8ed5dd",
+                    "primary-fixed-dim": "#ffb3b3",
+                    "on-background": "#261818",
+                    "tertiary-container": "#005e65",
+                    "background": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#a7eef6",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#f7dcdc",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "outline-variant": "#e1bebe",
+                    "inverse-on-surface": "#ffedec",
+                    "secondary-fixed": "#d1e4fb",
+                    "tertiary-fixed-dim": "#8bd2da",
+                    "on-tertiary-fixed": "#002022",
+                    "secondary-container": "#cfe2f9",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#261818",
+                    "on-primary-container": "#ffb7b7",
+                    "surface-container-highest": "#f7dcdc",
+                    "secondary-fixed-dim": "#b5c8df"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "margin-page": "32px",
+                    "container-max-width": "1200px",
+                    "stack-sm": "8px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "h1": ["Public Sans"],
+                    "button": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "label-caps": ["Public Sans"],
+                    "h3": ["Public Sans"],
+                    "h2": ["Public Sans"],
+                    "body-sm": ["Public Sans"]
+            },
+            "fontSize": {
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f7;
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen text-on-surface">
+<header class="bg-white dark:bg-gray-900 text-red-800 dark:text-red-500 font-['Public_Sans'] font-semibold tracking-tight border-b border-gray-200 dark:border-gray-800 shadow-sm flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-800 dark:text-red-500" data-icon="school">school</span>
+<span class="text-red-800 dark:text-red-500 font-bold text-xl uppercase tracking-wider">Campus Claim</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img class="h-full w-full object-cover" data-alt="professional headshot of a university student with a friendly expression and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2prKwDoJOfYiriw5hxmLcdlRX30Vt7m--FNn65J7sJMHJ0TeTPeFPuaGlpXKaDyo_HqdajaFVGfB5_EmTty5OWZrYF_fvYS3eTWQSRDKb89slxX4r_EiTo9_nqe6mmQJCmpVJ3J5OPvGGjUVoNsbnkK989I33xn9tOBge3sZomhfdarSmu7JelaBZ4fq9Qk0QVKQb3-_6hKKx9AjeORANwRWXxZQR6-Qm4cMSHH5jpmIS_dfnCGPF3zKtwuHvsMYYu-tu-qhnSBs"/>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-margin-page py-stack-lg">
+<div class="flex items-center gap-2 mb-stack-lg text-secondary hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+<span class="font-button text-button">Back to Browse</span>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="bg-white border border-outline-variant rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="p-gutter border-b border-outline-variant bg-surface-container-low">
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden border border-outline-variant flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="close-up of a silver aluminum laptop with a distinctive sticker in the corner, resting on a wooden library desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFN3KJPlRxzAJtcZ3qHK_6-_n-Ar1AffV3LCkMF-w8jS0bFzue_qxCXpuUMQ3d8PD84FdioDYHk9Jxe2BYNXvRI4NpwWoImErsxcv_rlkTKhbdD8TXnU2YkU1D5D6GzVM4HH5pcbNpc5Gzujf-UhSrqV-F0ZPGOjjUnN9_OXGPl_EwSpXOueNsfQ9hTZ3MwO3j0A9AQAM9iuOPy0gu5kI2I3jm-US5PMJCRNSCzpOTax5FStqIX_VYO4HngkrGFTs2zTviu_3e6Zc"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-secondary-container text-on-secondary-container mb-stack-sm self-start">
+                                FOUND ITEM
+                            </div>
+<h1 class="font-h1 text-h2 text-on-surface mb-2">Silver MacBook Air 13"</h1>
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span>
+<span class="font-body-sm text-body-sm">Science Building, Room 402 (Lab)</span>
+</div>
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+<span class="font-body-sm text-body-sm">Found on Oct 24, 2023</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-gutter space-y-stack-lg">
+<section>
+<div class="flex items-center gap-2 mb-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+<h3 class="font-h3 text-h3 text-on-surface">Prove it's yours</h3>
+</div>
+<form class="space-y-stack-md">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-stack-sm">
+                                    PROVIDE PROOF OR SPECIFIC DETAILS
+                                </label>
+<textarea class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-primary font-body-sm text-body-sm p-3 bg-surface-bright" placeholder="e.g., brand, contents, special marks, serial number, or specific wallpaper description..." rows="4"></textarea>
+<p class="mt-2 text-secondary font-body-sm text-xs italic">Help campus security verify your claim by describing non-obvious details.</p>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-stack-sm">
+                                    IMAGE UPLOAD FOR OWNERSHIP PROOF
+                                </label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-stack-lg flex flex-col items-center justify-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-primary mb-2" data-icon="cloud_upload">cloud_upload</span>
+<span class="font-button text-button text-on-surface mb-1">Drop a photo here or browse</span>
+<span class="font-body-sm text-xs text-secondary">Upload a photo of the item in your possession or a receipt.</span>
+</div>
+</div>
+<div class="pt-stack-sm">
+<label class="flex items-start gap-3 cursor-pointer group">
+<div class="mt-1">
+<input class="rounded text-primary focus:ring-primary border-outline-variant h-5 w-5" type="checkbox"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant select-none">
+                                        By submitting, I confirm this information is accurate and that I am the rightful owner of this item. Misleading claims may lead to university disciplinary action.
+                                    </span>
+</label>
+</div>
+<div class="pt-stack-md flex gap-stack-md flex-col sm:flex-row">
+<button class="flex-1 bg-primary text-on-primary font-button text-button py-4 rounded-lg shadow-md hover:bg-primary-container active:opacity-80 transition-all duration-200 flex items-center justify-center gap-2" type="submit">
+                                    Submit Claim
+                                    <span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+<button class="px-gutter border border-outline-variant text-secondary font-button text-button py-4 rounded-lg hover:bg-gray-50 transition-colors" type="button">
+                                    Cancel
+                                </button>
+</div>
+</form>
+</section>
+</div>
+<div class="px-gutter py-stack-md bg-surface-container-high/30 border-t border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="info">info</span>
+<p class="font-body-sm text-xs text-secondary">A member of the University Oversight team will review your claim within 2-3 business days.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<div class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-300 transition-transform active:scale-90 px-3 py-1">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Public_Sans'] text-xs font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-red-800 dark:text-red-400 bg-red-50 dark:bg-red-950/30 rounded-xl px-3 py-1 scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-['Public_Sans'] text-xs font-medium">Browse</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-300 transition-transform active:scale-90 px-3 py-1">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Public_Sans'] text-xs font-medium">My Items</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-300 transition-transform active:scale-90 px-3 py-1">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-['Public_Sans'] text-xs font-medium">Report</span>
+</div>
+</nav>
+</body></html>

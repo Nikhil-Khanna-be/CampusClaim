@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus Claim - Admin Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "primary-fixed": "#ffdad9",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#ffe9e8",
+                        "primary-container": "#a6192e",
+                        "tertiary": "#00454a",
+                        "on-secondary-fixed": "#091d2e",
+                        "on-surface-variant": "#594040",
+                        "surface-dim": "#eed4d3",
+                        "inverse-surface": "#3c2c2c",
+                        "outline": "#8d7070",
+                        "on-primary-fixed-variant": "#920322",
+                        "on-secondary-container": "#526478",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#81001c",
+                        "surface-bright": "#fff8f7",
+                        "surface-container-high": "#fde2e1",
+                        "surface": "#fff8f7",
+                        "on-primary-fixed": "#400009",
+                        "inverse-primary": "#ffb3b3",
+                        "surface-tint": "#b42537",
+                        "secondary": "#4e6073",
+                        "surface-container-low": "#fff0ef",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#8ed5dd",
+                        "primary-fixed-dim": "#ffb3b3",
+                        "on-background": "#261818",
+                        "tertiary-container": "#005e65",
+                        "background": "#fff8f7",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#a7eef6",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#f7dcdc",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "outline-variant": "#e1bebe",
+                        "inverse-on-surface": "#ffedec",
+                        "secondary-fixed": "#d1e4fb",
+                        "tertiary-fixed-dim": "#8bd2da",
+                        "on-tertiary-fixed": "#002022",
+                        "secondary-container": "#cfe2f9",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#261818",
+                        "on-primary-container": "#ffb7b7",
+                        "surface-container-highest": "#f7dcdc",
+                        "secondary-fixed-dim": "#b5c8df"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "margin-page": "32px",
+                        "container-max-width": "1200px",
+                        "stack-sm": "8px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Public Sans"],
+                        "button": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "label-caps": ["Public Sans"],
+                        "h3": ["Public Sans"],
+                        "h2": ["Public Sans"],
+                        "body-sm": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fff8f7;
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- Navigation Drawer (Admin Context) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col z-40 bg-white border-r border-gray-200 w-72 shadow-md">
+<div class="text-red-800 font-bold px-6 py-8 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="uppercase tracking-wider text-xl font-h2">Campus Claim</span>
+</div>
+<div class="px-6 pb-6 mb-4 border-b border-gray-100 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Professional headshot of a middle-aged university administrator in a clean office setting, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWtY8ZGOo9viqXfDJa6PDzI4LnUPVPkwtSJMVWPxDL-p_Xkuf4NYbBYeaqrp2DlkUPa2aRvDHyQODeafR29LGyv2Y0_mMqG2z6HP3vcl1vMcDrzuozBFtLgzq8PrwxB6sgC3wMLNu5sR9yCe4uD56W0Vbo9hM0JsnH9FCBicnIASHkOMPpEhDBGxfNyI_pZrbsqCX-NWtQfHVO0UvVLt3cwcW65eam-XrilYlHVvn6g_MZdYbHEqBTodlQHwm8cyV_7Lj5hnlFPaA"/>
+<div>
+<p class="font-h3 text-sm leading-tight">Admin Portal</p>
+<p class="text-gray-500 text-xs">University Oversight</p>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto">
+<a class="text-gray-600 px-4 py-3 mx-2 my-1 flex items-center gap-3 hover:bg-gray-100 rounded-lg transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-sm font-medium">Overview</span>
+</a>
+<a class="text-gray-600 px-4 py-3 mx-2 my-1 flex items-center gap-3 hover:bg-gray-100 rounded-lg transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+<span class="font-body-sm font-medium">Manage Found</span>
+</a>
+<a class="text-gray-600 px-4 py-3 mx-2 my-1 flex items-center gap-3 hover:bg-gray-100 rounded-lg transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+<span class="font-body-sm font-medium">Manage Claims</span>
+</a>
+<a class="bg-red-50 text-red-800 font-bold rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 translate-x-1 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="find_in_page">find_in_page</span>
+<span class="font-body-sm">Manage Lost</span>
+</a>
+</nav>
+<div class="p-4 border-t border-gray-100">
+<button class="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-red-50 hover:text-red-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-button">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 px-8 py-4 flex justify-between items-center shadow-sm">
+<h1 class="font-h1 text-h2 text-on-surface">Manage Lost Items</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-600 rounded-full border-2 border-white"></span>
+</button>
+<div class="h-8 w-[1px] bg-gray-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="font-label-caps text-gray-500 uppercase">Current Term: FALL 2024</span>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="max-w-[1200px] mx-auto p-margin-page space-y-stack-lg">
+<!-- Filters & Stats Bar -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="bg-white p-6 border border-gray-200 rounded-xl shadow-sm flex items-center gap-4">
+<div class="bg-red-50 p-3 rounded-lg text-red-800">
+<span class="material-symbols-outlined" data-icon="pending">pending</span>
+</div>
+<div>
+<p class="text-label-caps text-gray-500 uppercase">Pending Approval</p>
+<p class="text-h2 font-h2 text-on-surface">12</p>
+</div>
+</div>
+<div class="bg-white p-6 border border-gray-200 rounded-xl shadow-sm flex items-center gap-4">
+<div class="bg-blue-50 p-3 rounded-lg text-blue-800">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<div>
+<p class="text-label-caps text-gray-500 uppercase">Active Searches</p>
+<p class="text-h2 font-h2 text-on-surface">148</p>
+</div>
+</div>
+<div class="bg-white p-6 border border-gray-200 rounded-xl shadow-sm flex items-center gap-4">
+<div class="bg-green-50 p-3 rounded-lg text-green-800">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="text-label-caps text-gray-500 uppercase">Resolved Today</p>
+<p class="text-h2 font-h2 text-on-surface">5</p>
+</div>
+</div>
+<div class="bg-white p-6 border border-gray-200 rounded-xl shadow-sm flex items-center gap-4">
+<div class="bg-orange-50 p-3 rounded-lg text-orange-800">
+<span class="material-symbols-outlined" data-icon="flag">flag</span>
+</div>
+<div>
+<p class="text-label-caps text-gray-500 uppercase">Flagged Matches</p>
+<p class="text-h2 font-h2 text-on-surface">8</p>
+</div>
+</div>
+</div>
+<!-- Moderation Workspace -->
+<div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+<div class="p-6 border-b border-gray-200 flex flex-wrap gap-4 justify-between items-center bg-gray-50/50">
+<div class="flex gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary font-body-sm w-64" placeholder="Search by student ID or item..." type="text"/>
+</div>
+<select class="bg-white border border-gray-300 rounded-lg px-4 py-2 font-body-sm focus:ring-2 focus:ring-primary focus:border-primary">
+<option>All Statuses</option>
+<option>Pending Approval</option>
+<option>Published</option>
+<option>Match Flagged</option>
+</select>
+</div>
+<button class="flex items-center gap-2 text-primary font-button px-4 py-2 hover:bg-red-50 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                        Advanced Filters
+                    </button>
+</div>
+<!-- Moderation List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 text-label-caps text-gray-500 uppercase">
+<th class="px-6 py-4 font-semibold">Lost Item Details</th>
+<th class="px-6 py-4 font-semibold">Student Information</th>
+<th class="px-6 py-4 font-semibold">Status</th>
+<th class="px-6 py-4 font-semibold text-right">Moderation Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<!-- Item 1: Pending -->
+<tr class="hover:bg-gray-50/50 transition-colors">
+<td class="px-6 py-6">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-gray-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a silver MacBook Pro on a wooden table, soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrRhkQ6OcnxBB4Ergpx9rP8tFonWDdKbnQZPNu6vKkl1nU0lVx3N_rwC54grgT_iZmIB-_XoNIiFy9URTj_b4PvUrowVkYI_m0k_Brwwc2uDaWqKqNIDNtryh9__RevXfWbaHfk_bvBW56QE0zHGH7Z3tFOgfFf_le0c7SBs0B0mg29ZAB-_Xc3Qw_lcuAszDln9jqRkHSpBF364oXoCcUE25ezs3yveTaS8qYqkqUYz8u083asEXvOslaRIHmrWmVi_-S4_s1kRA"/>
+</div>
+<div>
+<p class="font-h3 text-base text-on-surface">MacBook Pro 14"</p>
+<p class="text-gray-500 text-sm mt-1">Lost in: Central Library, 3rd Floor</p>
+<p class="text-xs text-gray-400 mt-1">Reported: 2 hours ago</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<p class="font-body-sm font-semibold">Marcus Johnson</p>
+<p class="text-gray-500 text-sm">ID: #882941</p>
+<p class="text-xs text-primary underline">m.johnson@university.edu</p>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+                                        Pending Review
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-primary text-white rounded-lg font-button text-xs hover:bg-red-900 transition-all flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+                                            Approve
+                                        </button>
+<button class="px-3 py-1.5 border border-gray-300 text-gray-700 rounded-lg font-button text-xs hover:bg-gray-50 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                                            Edit
+                                        </button>
+<button class="p-1.5 text-gray-400 hover:text-red-600 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 2: Match Flagged -->
+<tr class="hover:bg-gray-50/50 transition-colors">
+<td class="px-6 py-6">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-gray-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A bunch of metal keys with a leather keychain resting on a grey sidewalk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgDdN9zeuSDGT10y2ikAGphB8cYnQUIhP42vcSSSjvlNm72MNJrRbZHaww5rKfrF82eYRcjRzwAgEm_8S_MsPGDNuulM2sQAlka7J8Trq7Au-B8SL3qLHwaZ6v3217AmS2mn7uy-lPszFYcVkaLpE5q5SaUo5EL23-VnVChnuV3OniTsZnrSAqo-0MM7_Sn9ZAdNJN30m6X6QTzR5M1ofjNuhNzxiybI83ZElMz5FIAD05GpwjVtT_KXBQ2fFN7USsLXh_mJSLkCU"/>
+</div>
+<div>
+<p class="font-h3 text-base text-on-surface">Dorm Keys (Suite 4B)</p>
+<p class="text-gray-500 text-sm mt-1">Lost in: Student Union Atrium</p>
+<p class="text-xs text-gray-400 mt-1">Reported: Yesterday</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<p class="font-body-sm font-semibold">Sarah Chen</p>
+<p class="text-gray-500 text-sm">ID: #901122</p>
+<p class="text-xs text-primary underline">s.chen@university.edu</p>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        Match Flagged
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-blue-600 text-white rounded-lg font-button text-xs hover:bg-blue-700 transition-all flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="mark_email_read">mark_email_read</span>
+                                            Notify Match
+                                        </button>
+<button class="px-3 py-1.5 border border-gray-300 text-gray-700 rounded-lg font-button text-xs hover:bg-gray-50 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+                                            View Match
+                                        </button>
+<button class="p-1.5 text-gray-400 hover:text-red-600 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 3: Approved -->
+<tr class="hover:bg-gray-50/50 transition-colors">
+<td class="px-6 py-6">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-gray-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern stylish reading glasses with a black frame on a white background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZjIzjf0xyPZP2o_6lcBj_hZiKMVPjYNVTyWs5J6ihArOlBGLtQSC3IA4uK0kYjhc2E0nVt0MerjZhdFlNO0go2xA7LqeAg2xAbaEkiOOtbvgPj4gw5v87xBjH6mKuup4v7iv7J60uMQS4Bkksms9Bn4hlKCP9JmatZn6nRx5XVIBcUAR2XRhZIgRya55yrullnH3LxjUsUnJhatRAnl8pQVUC18vcD125RSZnDz1SfjfMRWa0uk2l4d8Mk1lMlPp_EQJS1_XDA9U"/>
+</div>
+<div>
+<p class="font-h3 text-base text-on-surface">Reading Glasses</p>
+<p class="text-gray-500 text-sm mt-1">Lost in: Science Center Lab 102</p>
+<p class="text-xs text-gray-400 mt-1">Reported: 3 days ago</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<p class="font-body-sm font-semibold">David Wilson</p>
+<p class="text-gray-500 text-sm">ID: #774332</p>
+<p class="text-xs text-primary underline">d.wilson@university.edu</p>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        Approved
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-orange-500 text-white rounded-lg font-button text-xs hover:bg-orange-600 transition-all flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="flag">flag</span>
+                                            Flag Match
+                                        </button>
+<button class="px-3 py-1.5 border border-gray-300 text-gray-700 rounded-lg font-button text-xs hover:bg-gray-50 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                                            Edit
+                                        </button>
+<button class="p-1.5 text-gray-400 hover:text-red-600 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="remove_circle">remove_circle</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 border-t border-gray-200 flex justify-between items-center bg-gray-50/30">
+<p class="text-body-sm text-gray-500">Showing 1 to 3 of 148 results</p>
+<div class="flex gap-2">
+<button class="p-2 border border-gray-300 rounded-lg hover:bg-white transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-4 py-2 bg-primary text-white rounded-lg font-button text-sm">1</button>
+<button class="px-4 py-2 hover:bg-white border border-transparent hover:border-gray-300 rounded-lg font-button text-sm transition-all">2</button>
+<button class="px-4 py-2 hover:bg-white border border-transparent hover:border-gray-300 rounded-lg font-button text-sm transition-all">3</button>
+<button class="p-2 border border-gray-300 rounded-lg hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Match Suggestion Side Panel (Contextual Component) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<div class="lg:col-span-2 bg-white p-8 border border-gray-200 rounded-xl shadow-sm">
+<h3 class="font-h2 text-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600" data-icon="auto_awesome">auto_awesome</span>
+                        AI Smart Match Suggestions
+                    </h3>
+<p class="text-body-sm text-gray-600 mb-6">These found items in our inventory closely match the "Reading Glasses" reported by David Wilson.</p>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-orange-50 border border-orange-100 rounded-xl">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded bg-white overflow-hidden border border-orange-200">
+<img class="w-full h-full object-cover" data-alt="Close up of black glasses on a white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHd-bWueUblE1EF5t3BLowvColg1ZFuRKDffxEFEaK984h57HRqmM2xiXOQQHav6d3smKPGwqRVSrii-osSnAnPR7VoXlyavj8siq7MduPp7Omsr_mQz3XEhrXyOX6IOE-UHaSbU1c_RZxpc-F1aR_pkiZGXhW2nfPO1j85sWqh8fuQieJOSYa3xLbE4mNOwKPjdWTFkIbGfjnyKNl9yS0sDgyBrCMVKOEPOLL8tBHfDI0jHR4Sr6gnd6Lw-XK6oJP6qptwNOPPVU"/>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Black Ray-Ban Glasses</p>
+<p class="text-xs text-gray-500">Found at: Science Center Cafe</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold text-orange-800 bg-orange-200 px-2 py-1 rounded">92% Match</span>
+<button class="text-primary font-button text-sm hover:underline">Flag as Match</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-gray-50 border border-gray-100 rounded-xl">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded bg-white overflow-hidden border border-gray-200">
+<img class="w-full h-full object-cover" data-alt="Tortoise shell glasses on a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0d63K5qr8RpMAUcNwfUMqT3B9sV3_62q6PgzEKnL0xch1GZXj5cOD7Xu5R8OTJ-dDEPqmKooNXUsp7DSNpwve1TEdZOL1aPrk6L-809f-OsoAvfz82vIgZtmeNwx7YfTWjDsYRf7m2dGHehZFQKnJa3AfN6uXWmYtjckCPtBl3UlVwQsngfOU1kIHORGsV3DWzvKDzGs41IxHUU7wiKdY320Uj6mnFmG1cS-WfzzP_ACj0rBzmgzwRtOjjuU2ETaWYAI08oXcIis"/>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Warby Parker Frames</p>
+<p class="text-xs text-gray-500">Found at: Health Sciences Bldg</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold text-gray-500 bg-gray-200 px-2 py-1 rounded">64% Match</span>
+<button class="text-gray-400 font-button text-sm cursor-not-allowed">Flag as Match</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-red-900 text-white p-8 rounded-xl shadow-lg flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="verified_user">verified_user</span>
+<h3 class="font-h2 text-xl mb-2">Administrative Guidelines</h3>
+<p class="text-red-100 text-sm leading-relaxed">
+                            Remember to verify student identity via ID card before releasing any high-value items like electronics or keys. Ensure all "Found" logs are updated immediately upon handover.
+                        </p>
+</div>
+<button class="mt-8 bg-white text-primary px-6 py-3 rounded-lg font-button hover:bg-red-50 transition-colors relative z-10 shadow-md">
+                        Review Full Protocol
+                    </button>
+<!-- Decorative element -->
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-red-800 rounded-full opacity-30"></div>
+</div>
+</div>
+</div>
+<footer class="p-8 border-t border-gray-200 text-center">
+<p class="text-gray-400 text-xs">© 2024 University Campus Claim Admin Portal. All rights reserved.</p>
+</footer>
+</main>
+</body></html>

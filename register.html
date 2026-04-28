@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004f55",
+                    "primary-fixed": "#ffdad9",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ffe9e8",
+                    "primary-container": "#a6192e",
+                    "tertiary": "#00454a",
+                    "on-secondary-fixed": "#091d2e",
+                    "on-surface-variant": "#594040",
+                    "surface-dim": "#eed4d3",
+                    "inverse-surface": "#3c2c2c",
+                    "outline": "#8d7070",
+                    "on-primary-fixed-variant": "#920322",
+                    "on-secondary-container": "#526478",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#81001c",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-high": "#fde2e1",
+                    "surface": "#fff8f7",
+                    "on-primary-fixed": "#400009",
+                    "inverse-primary": "#ffb3b3",
+                    "surface-tint": "#b42537",
+                    "secondary": "#4e6073",
+                    "surface-container-low": "#fff0ef",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#8ed5dd",
+                    "primary-fixed-dim": "#ffb3b3",
+                    "on-background": "#261818",
+                    "tertiary-container": "#005e65",
+                    "background": "#fff8f7",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#a7eef6",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#f7dcdc",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "outline-variant": "#e1bebe",
+                    "inverse-on-surface": "#ffedec",
+                    "secondary-fixed": "#d1e4fb",
+                    "tertiary-fixed-dim": "#8bd2da",
+                    "on-tertiary-fixed": "#002022",
+                    "secondary-container": "#cfe2f9",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#261818",
+                    "on-primary-container": "#ffb7b7",
+                    "surface-container-highest": "#f7dcdc",
+                    "secondary-fixed-dim": "#b5c8df"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "margin-page": "32px",
+                    "container-max-width": "1200px",
+                    "stack-sm": "8px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "h1": ["Public Sans"],
+                    "button": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "label-caps": ["Public Sans"],
+                    "h3": ["Public Sans"],
+                    "h2": ["Public Sans"],
+                    "body-sm": ["Public Sans"]
+            },
+            "fontSize": {
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f7;
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col">
+<!-- TopAppBar Replacement for Registration (Minimal Shell) -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="school">school</span>
+<span class="text-primary font-h1 text-h3 tracking-tight">Campus Claim</span>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<span class="text-secondary font-body-sm">Already have an account?</span>
+<a class="text-primary font-button hover:underline underline-offset-4" href="#">Login</a>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-4 py-12 md:py-20">
+<div class="w-full max-container-max-width flex flex-col md:flex-row bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-gray-200 overflow-hidden min-h-[600px]">
+<!-- Left Side: Visual/Branding Section -->
+<div class="hidden md:flex flex-1 relative bg-primary-container p-12 flex-col justify-end">
+<div class="absolute inset-0 opacity-20 overflow-hidden">
+<img alt="University Campus Architecture" class="w-full h-full object-cover" data-alt="Modern university campus building with grand architectural features and students walking under bright daylight with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs68ij2t3TpUsLOABlfpMJp4Tf6NCylCeMWKZwlspbWC1TYzVDjz1q6frAK5MabgCH5VDDr81UwiaUroRaDguY5EsMF5Cc-h1zDGBBi9cjyNBRl4MCFPAXxUcDjPZ-FQH0k98WgVYR535jnKDnptp__7vKtJ7p0CAHJGS2Zd1SBEesJNzP40HF-xgBpg8_7LslJip5DOzJL-IAj8aLUHHXoL_mXpVeL4KdFuccmnK_YZ8yFogI8ZBPoh3QuAc2PMnqUT20fpvg8P8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+</div>
+<div class="relative z-10 text-white">
+<h1 class="font-h1 text-h1 mb-4">Reuniting students with their lost essentials.</h1>
+<p class="font-body-lg text-white/80 max-w-md">Join the official University Lost and Found network to report items, track claims, and help your peers.</p>
+<div class="mt-8 flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a diverse male student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmB1Z9RLfoeFYlEswseoEfdI05LNdHnvZZMa8AyolOsyMsnK6kV8SG2VtPUV4DTWbhD637I4pj8bqY6QbDC_oBbCxLBmCHBLnNeUVBSVrUrakqT2Q4qojmEHaUhG3ATmv5EYV1rtz1LBQDtYSqbxeUG_qH-W6NuzDvt35VcxaoUF3tj05cIfrjz8BCKE-NqUQ2mdfRzfNBc0yERMAiZCWRz72tOTFLcaVfzB8-iRY3-TNAX2zvND2xsjGobv4cNYY1tmTWed8Sq4Q"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling female college student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVFzhi_LAV15WvtkVX5qydNd10W3JAdlfeYhg2QFC3xtiJjkfCmmP-8SNAXSpFOeBMua3sHxTs116RdTJ6_ONm8qUZgIpRfW-VmETzp0NLq35OSJWMGfBu0p4rfrmjGANAtfIUNTHOtPBbIHK41y912lnjihIoRzteu-Ur5D-nROlvnz44FWJ-j7iQ3qySe91jOekuYXMaINR5tpI3zAwTDMj-0qDgkXShT1CEcV9AhXk-kxY-G_pzXl4VznDa6YbLH3jcOg7xvrQ"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a student wearing glasses looking professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKXIkA-7Ocvri47YYBuvaj5G8mHyMDajwyHR1JjJUVjeiyaGVp6OjzW-aq2h0ESzlbphDgQWJBpkDEjGDEXZBsNE_ASusCkWNcslCgO6wnMSdNAwGxcWmrXwfF9gRpug0jRn2iKiLcbfk3D3b9oCCJuPgzAJJUKaazXz63sfZi2i0o91qP0JWUG-DiXQXp9b6Ezk1KHxyj9Fy7QLyb3Gx1dH-iDpTTdsKIPyWG9ocWFOK_olTTPwlwI_27fwDrpRMR42oRakEJFcQ"/>
+</div>
+</div>
+<span class="font-body-sm text-white/90">Over 5,000+ students joined</span>
+</div>
+</div>
+</div>
+<!-- Right Side: Form Section -->
+<div class="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Create Student Account</h2>
+<p class="font-body-sm text-secondary">Please use your official university credentials to register.</p>
+</div>
+<form class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary" for="full-name">FULL NAME</label>
+<input class="px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-surface-container-lowest" id="full-name" placeholder="Alex Johnson" type="text"/>
+</div>
+<!-- Student ID -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary" for="student-id">STUDENT ID</label>
+<input class="px-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-surface-container-lowest" id="student-id" placeholder="U2024-XXXXX" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary" for="email">UNIVERSITY EMAIL</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-lg" data-icon="mail">mail</span>
+<input class="w-full pl-10 pr-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-surface-container-lowest" id="email" placeholder="alex.j@university.edu" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Password -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary" for="password">PASSWORD</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-lg" data-icon="lock">lock</span>
+<input class="w-full pl-10 pr-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-surface-container-lowest" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary" for="confirm-password">CONFIRM PASSWORD</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-lg" data-icon="lock_reset">lock_reset</span>
+<input class="w-full pl-10 pr-4 py-3 border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-sm bg-surface-container-lowest" id="confirm-password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</div>
+<!-- Terms & Conditions -->
+<div class="flex items-start gap-3 py-2">
+<div class="flex items-center h-5">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary transition-colors cursor-pointer" id="terms" type="checkbox"/>
+</div>
+<label class="font-body-sm text-secondary" for="terms">
+                            I agree to the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a> regarding university item handling.
+                        </label>
+</div>
+<!-- CTA Buttons -->
+<div class="pt-4 space-y-4">
+<button class="w-full bg-primary text-white font-button py-4 rounded-lg shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+                            Register
+                            <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 md:hidden">
+<span class="text-secondary font-body-sm">Already have an account?</span>
+<a class="text-primary font-button hover:underline" href="#">Login</a>
+</div>
+</div>
+</form>
+<div class="mt-8 pt-8 border-t border-gray-100 flex items-center justify-between">
+<a class="flex items-center gap-1 text-secondary hover:text-primary transition-colors font-button" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_back">arrow_back</span>
+                        Back to Login
+                    </a>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline-variant" data-icon="verified_user" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full px-6 py-8 mt-auto flex flex-col md:flex-row justify-between items-center text-secondary font-body-sm gap-4 border-t border-gray-100">
+<p>© 2024 Campus Claim Network. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="hover:text-primary transition-colors" href="#">University Guidelines</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</footer>
+</body></html>
